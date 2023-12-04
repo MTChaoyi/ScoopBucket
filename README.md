@@ -2,34 +2,34 @@
 >
 > Some buckets from [🍨 Scoopet 🍨](https://github.com/ivaquero/scoopet) | [scoop-lemon](https://github.com/hoilc/scoop-lemon)
 
-## :green_book:安装 Scoop
-### :blue_book:1. 设置 PowerShell 执行策略
+## :ledger:安装 Scoop
+### :bookmark_tabs:1. 设置 PowerShell 执行策略
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-### :blue_book:2. 下载 Scoop 安装脚本
+### :bookmark_tabs:2. 下载 Scoop 安装脚本
 
 ```powershell
 irm get.scoop.sh -outfile 'install.ps1'
 ```
 
-### :blue_book:3. 使用自定义路径安装 Scoop
+### :bookmark_tabs:3. 使用自定义路径安装 Scoop
 
 ```powershell
 .\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
 ```
 
-## :green_book:推荐优先安装 App
+## :ledger:推荐安装 App
 
-### :blue_book:安装 sudo 直接使用管理员运行命令
+### :bookmark_tabs:安装 sudo 直接使用管理员运行命令
 
 ```powershell
 scoop install sudo
 ```
 
-### :blue_book:安装 Aria2 来加速下载
+### :bookmark_tabs:安装 Aria2 来加速下载
 
 ```powershell
 scoop install aria2
@@ -52,13 +52,62 @@ scoop install aria2
     scoop config aria2-min-split-size 4M  # 最小文件分片大小
     ```
 
-### :blue_book:安装 Git 来添加新仓库
+### :bookmark_tabs:安装 Git 来添加新仓库
 
 ```powershell
 scoop install git
 ```
 
-## :green_book:常用命令
+## :ledger:备份恢复
+
+### :bookmark_tabs:导入导出法(全部重新安装，可保留持久化数据)
+
+- 导出软件清单
+
+  ```powershell
+  scoop export > scoopfile.json
+
+  # 同时导出 Scoop 配置文件
+  -c, --config
+  ```
+
+- (可选) 备份持久化数据
+
+  - 复制压缩备份 `['Scoop_Path']\persist` 文件夹
+
+  - 复制压缩备份 `['GlobalScoopApps_Path']\persist` 文件夹
+
+- 导入
+
+  ```powershell
+  scoop import <path/url to scoopfile.json>
+  ```
+
+- (可选) 恢复持久化数据
+
+### :bookmark_tabs:完整备份法(迁移全部文件)
+
+- 将整个 Scoop 安装文件夹复制迁移到新系统
+
+- 用户环境变量 path 中添加 `['Scoop_Path']\shims`
+
+- 系统环境变量 path 中添加 `['GlobalScoopApps_Path']\shims`
+
+- 设置 PowerShell 执行策略
+
+  ```powershell
+  Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+  ```
+
+- 执行 `['Scoop_Path']\apps\scoop\current\bin` 里面的 `refresh.ps1` 和 `scoop.ps1` 脚本
+
+- 重置版本依赖，恢复环境变量
+
+  ```powershell
+  scoop reset *
+  ```
+
+## :ledger:常用命令
 
 - 搜索
 
@@ -100,7 +149,7 @@ scoop install git
   scoop bucket list  # 列出已安装 bucket
   scoop bucket rm [<args>]  # 删除 bucket
   scoop bucket known  # 列出官方推荐 bucket 仓库
-  
+
   # Buckets 是可安装的应用程序的存储库。 Scoop 附带一个默认 bucket(main)，也可以添加您或其他人已发布的 bucket。
   # 添加 extras bucket:
   scoop bucket add extras https://github.com/ScoopInstaller/Extras.git
@@ -112,13 +161,16 @@ scoop install git
 
   ```powershell
   scoop update <app> [options]
-  
+
   # 将 Scoop 更新到最新版本。
   scoop update
   # 安装指定应用程序的新版本（如果有）
   scoop update <app>
   # 您可以使用以下命令来更新所有应用程序
   scoop update *
+
+  # 可使用hold来禁止更新，unhold取消禁止
+  scoop hold|unhold [-g] <app>
   ```
 
   ```
@@ -174,5 +226,8 @@ scoop install git
   ```powershell
   scoop cache show|rm [app(s)]  # 显示|清除下载缓存
   scoop checkup  # 检查潜在问题
+  scoop cleanup  # 删除旧版本，清理 Scoop 应用程序
+  scoop cleanup [-a|-g|-k] <app>  # 如果该应用程序的旧版本存在，则清理该版本。
+  scoop depends <app>  # 按安装顺序列出应用程序的依赖项
+  scoop alias add|list|rm [<args>]  # 添加、删除或列出 Scoop 别名(别名是自定义的 Scoop 子命令，可用于简化常见任务。)详情见scoop help alias
   ```
-
