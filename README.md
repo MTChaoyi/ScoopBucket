@@ -1,6 +1,6 @@
 > Learn from [🐟 dorado](https://github.com/chawyehsu/dorado)
 >
-> Some buckets from [🍨 Scoopet 🍨](https://github.com/ivaquero/scoopet) | [scoop-lemon](https://github.com/hoilc/scoop-lemon)
+> Some buckets from [🍨 Scoopet 🍨](https://github.com/ivaquero/scoopet) | [scoop-lemon](https://github.com/hoilc/scoop-lemon) | [rainte](https://github.com/rainte/scoop)
 
 ## :ledger:安装 Scoop
 ### :bookmark_tabs:1. 设置 PowerShell 执行策略
