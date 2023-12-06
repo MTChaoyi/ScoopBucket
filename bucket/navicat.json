@@ -2,9 +2,9 @@
     "version": "16.3.3",
     "description": "数据库工具",
     "homepage": "https://navicat.com.cn",
-    "license":"Proprietary",
+    "license": "Proprietary",
     "url": "https://download.navicat.com.cn/download/navicat163_premium_cs_x64.exe",
-    "hash": "15d5f731aa9ae7654eab32887a5f2fcdd03f4e4f861245140a128a0ddc5bf782",
+    "hash": "7b6202187ff25facef1cbcfb4f56aebfcb081887ecc0b1c3d068eb0f81b5d3e7",
     "innosetup": true,
     "shortcuts": [
         [
@@ -16,8 +16,10 @@
         "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\navicat\"",
         "Copy-Item -Path \"$scriptdir\\reset.bat\" -Destination \"$dir\\reNavicat.bat\""
     ],
-    "notes":["管理员模式执行以下命令创建开机自动运行重置试用脚本的计划任务",
-    "SchTasks /Create /SC ONSTART /TN \"ResetNavicat\" /TR \"$dir\\reNavicat.bat\" "],
+    "notes": [
+        "管理员模式执行以下命令创建开机自动运行重置试用脚本的计划任务",
+        "SchTasks /Create /SC ONSTART /TN \"ResetNavicat\" /TR \"$dir\\reNavicat.bat\" "
+    ],
     "checkver": {
         "url": "https://navicat.com.cn/products/navicat-premium-release-note",
         "re": "Navicat Premium \\(Windows\\) version ([\\d\\.]+)"
