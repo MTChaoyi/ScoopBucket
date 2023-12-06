@@ -1,0 +1,46 @@
+{
+    "version": "0.27.4-patch.1",
+    "description": "解锁网易云音乐客户端变灰歌曲",
+    "homepage": "https://github.com/UnblockNeteaseMusic/server",
+    "license":"LGPL-3.0, GPL-3.0",
+    "url": "https://github.com/UnblockNeteaseMusic/server/archive/refs/tags/v0.27.4-patch.1.zip",
+    "hash": "8a57550f4272f80572a0469a8359f79543cd852fc19a53055a5cf80157d202f5",
+    "extract_to":[
+        ""
+    ],
+    "post_install": [
+        "Copy-Item -Path \"$scriptdir\\nw.js\" -Destination \"$dir\\nw.js\"",
+        "if (Get-Command node) {",
+        "   if (Get-Command yarn) {",
+        "       yarn install",
+        "       npm install -g node-windows",
+        "       npm link node-windows",
+        "       node $dir\\nw.js",
+        "   } else {",
+        "       Write-Host \"请先安装yarn\"",
+        "   }",
+        "} else {",
+        "   Write-Host \"请先安装nodejs\"",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "node $dir\\nw.js"
+        ]
+    },
+    "persist":[
+        "nw.js"
+    ],
+    "notes":[
+        "如果安装失败  请手动安装 node 和 yarn",
+        "然后在 $dir 中逐个执行下列命令",
+        "yarn install",
+        "npm install -g node-windows",
+        "npm link node-windows",
+        "node .\\nw.js"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/UnblockNeteaseMusic/server/archive/refs/tags/v$version.zip"
+    }
+}
