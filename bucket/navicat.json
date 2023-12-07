@@ -14,11 +14,13 @@
     ],
     "post_install": [
         "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\navicat\"",
-        "Copy-Item -Path \"$scriptdir\\reset.bat\" -Destination \"$dir\\reNavicat.bat\""
+        "Copy-Item -Path \"$scriptdir\\reset.bat\" -Destination \"$dir\\reNavicat.bat\"",
+        "Copy-Item -Path \"$dir\\reNavicat.bat\" -Destination \"$env:USERPROFILE\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\""
     ],
     "notes": [
-        "管理员模式执行以下命令创建开机自动运行重置试用脚本的计划任务",
-        "SchTasks /Create /SC ONSTART /TN \"ResetNavicat\" /TR \"$dir\\reNavicat.bat\" "
+        "已默认将重置试用脚本 reNavicat.bat 添加到开机自启菜单",
+        "Win+R 打开运行窗口  输入 shell:startup 查看",
+        "如果添加失败或被安全软件拦截  请自行添加应用根目录下的 reNavicat.bat 到开机自启菜单"
     ],
     "checkver": {
         "url": "https://navicat.com.cn/products/navicat-premium-release-note",
