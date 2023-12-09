@@ -1,0 +1,26 @@
+{
+    "version": "3.0.20_v2.9",
+    "description": "Emby 电脑桌面客户端（Windows 64bit），小秘版",
+    "homepage": "https://t.me/EmbyNoisyX",
+    "license": "Trailware",
+    "extract_dir": "Emby Theater",
+    "url": "https://alist.mtchaoyi.top/d/OneDrive/Programs/Emby%20for%20Windows_3.0.20_v2.9(Carnival).exe#/dl.7z",
+    "hash": "9CE2D03B5FCB7ACC15CAE93D4EFA00474AAB2DD5E49CE84F86E40CB16D56A991",
+    "shortcuts": [
+        [
+            "Emby.Theater.exe",
+            "Emby"
+        ]
+    ],
+    "persist":[
+        "cache",
+        "data",
+        "logs"
+    ],
+    "bin": [
+        [
+            "Emby.Theater.exe",
+            "Emby"
+        ]
+    ]
+}
