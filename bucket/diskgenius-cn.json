@@ -1,0 +1,22 @@
+{
+    "version": "5.5.0.1488",
+    "description": "Utility for data recovery, disk partition management, backup & restore",
+    "homepage": "https://www.diskgenius.cn/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://alist.mtchaoyi.top/d/OneDrive/Programs/Diskgenius_Pro_x64_5.5.0.1488_cn.exe",
+            "hash": "0E8E6CCAC4BDC7D3335E7E0F9D98E984ACDAA089B69538863E7F8D4AB795D887"
+        }
+    },
+    "extract_dir": "DiskGenius",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\Options.ini\")) { New-Item \"$dir\\Options.ini\" | Out-Null }",
+    "bin": "DiskGenius.exe",
+    "shortcuts": [
+        [
+            "DiskGenius.exe",
+            "DiskGenius"
+        ]
+    ],
+    "persist": "Options.ini"
+}
