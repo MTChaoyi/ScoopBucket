@@ -1,10 +1,14 @@
 {
-    "version": "3.9.8.15",
-    "description": "通讯应用",
-    "homepage": "https://pc.weixin.qq.com",
-    "license":"Freeware",
-    "url": "https://webcdn.m.qq.com/spcmgr/download/WeChatSetup_3.9.8.15.exe#/dl.7z",
-    "hash": "749753d77418666f4f76a107fbf38cfbc8f7df9d19ff0e5218b03a02a6122583",
+    "homepage": "https://weixin.qq.com",
+    "description": "微信，是一个生活方式",
+    "version": "3.9.8",
+    "license": "© 1998 - 2021 Tencent Inc. All Rights Reserved",
+    "architecture": {
+        "64bit": {
+            "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+            "hash": "749753d77418666f4f76a107fbf38cfbc8f7df9d19ff0e5218b03a02a6122583"
+        }
+    },
     "installer": {
         "script": [
             "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse",
@@ -20,7 +24,7 @@
     },
     "shortcuts": [
         [
-            "wechat.exe",
+            "WeChat.exe",
             "WeChat"
         ]
     ],
@@ -32,10 +36,14 @@
         ]
     },
     "checkver": {
-        "url": "https://pc.qq.com/detail/8/detail_11488.html",
-        "regex": "版本：([\\d.]+)"
+        "url": "https://pc.weixin.qq.com",
+        "regex": "class=\"download-version\">([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/WeChatSetup_$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
+            }
+        }
     }
 }
