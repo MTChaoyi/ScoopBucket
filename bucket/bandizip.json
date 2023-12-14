@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-X64.EXE",
-            "hash": "7dd2cb9472b291866239fdd49bca9ea66ef437caf68bc2f49c18370f6981d5ba",
+            "hash": "dcc3293abab4f81ad6b3a3a26c53dcbd153c46809f9aaebe57430f2f1df7b980",
             "pre_install": "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'"
         },
         "32bit": {
