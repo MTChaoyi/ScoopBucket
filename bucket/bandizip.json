@@ -25,9 +25,7 @@
         ]
     },
     "post_install": [
-        "if ((Get-CimInstance Win32_OperatingSystem).Version -ge '10.0.22000'){",
-        "    Start-Process -FilePath \"$dir\\data\\RegPackage.x86.exe\" -ArgumentList '/reg \"$dir\\data\\bzshell.x64.msix\"' -Wait",
-        "}"
+        "regsvr32 /s \"$dir\\bdzshl.x64.dll\""
     ],
     "bin": "Bandizip.exe",
     "shortcuts": [
