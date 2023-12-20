@@ -16,6 +16,10 @@
             "KikoPlay"
         ]
     ],
+    "persist":[
+        "data",
+        "extension"
+    ],
     "checkver": {
         "github": "https://github.com/KikoPlayProject/KikoPlay"
     },
