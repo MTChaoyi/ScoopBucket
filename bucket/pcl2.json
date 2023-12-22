@@ -30,8 +30,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/Hex-Dragon/PCL2/releases/",
-        "regex": "tags/([\\d.]+)\\.zip"
+        "url": "https://api.github.com/repos/Hex-Dragon/PCL2/releases/latest",
+        "regex": "zipball/([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
