@@ -22,7 +22,7 @@
     ],
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name mtchaoyi) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name mtchaoyi) scripts/neteasemusic/DoradoUtils.psm1)",
             "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
