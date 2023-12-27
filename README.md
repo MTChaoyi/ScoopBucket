@@ -221,6 +221,34 @@ scoop install git
   scoop cat <app>
   ```
 
+- shim
+  ```powershell
+  Usage: scoop shim <subcommand> [<shim_name>...] [options] [other_args]
+
+  # 可用的子命令: add, rm, list, info, alter
+
+  # 要添加自定义填充程序，请使用 'add' 子命令:
+  scoop shim add <shim_name> <command_path> [<args>...]
+
+  # 要删除 shims，请使用 'rm' 子命令：（注意：这可能会删除应用程序清单添加的 shims）
+  scoop shim rm <shim_name> [<shim_name>...]
+
+  # 要列出所有 shims 或匹配的 shims，请使用 'list' 子命令:
+  scoop shim list [<shim_name>/<pattern>...]
+
+  # 要显示填充程序的信息，请使用 'info' 子命令:
+  scoop shim info <shim_name>
+
+  # 要更改 shim 的目标源，请使用 'alter' 子命令:
+  scoop shim alter <shim_name>
+
+  # 操纵全局 shim(s)
+    -g, --global
+
+  # 提示：第一个双连字符“--”（如果有）将被视为 POSIX 样式命令选项终止符并且不会包含在参数中，因此如果您想将“-g”或“--global”等参数传递给 shim ，将它们放在 '--' 之后。请注意，在 PowerShell 中，您必须使用引号 '--'，例如，
+  scoop shim add myapp 'D:\path\myapp.exe' '--' myapp_args --global
+  ```
+
 - 其他命令
 
   ```powershell
