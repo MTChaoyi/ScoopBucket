@@ -37,7 +37,7 @@
         "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
         "    Remove-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Recurse",
         "}",
-        "New-Item -ItemType Junction -Path \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Target \"$dir\\User Data\""
+        "New-Item -ItemType SymbolicLink -Path \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Target \"$persist_dir\\User Data\""
     ],
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\chrome.exe"
