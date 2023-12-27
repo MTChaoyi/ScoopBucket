@@ -1,0 +1,64 @@
+{
+    "version": "231220",
+    "description": "Highly customizable media player",
+    "homepage": "https://potplayer.daum.net",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://potplayer.daum.net/publicRelation"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://alist.mtchaoyi.top/d/OneDrive/Programs/PotPlayer_1.7.22076_64bit_Green.7z",
+            "hash": "20ED8B83099FFB5C93A787C80935E5350681C072C41BB22C4B1BBD6C196E7F25",
+            "shortcuts": [
+                [
+                    "PotPlayer64.exe",
+                    "PotPlayer"
+                ],
+                [
+                    "PotPlayerMini64.exe",
+                    "PotPlayer Mini"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "Remove-Item \"$dir\\`$*\" -Force -Recurse",
+        "$CONT = @(",
+        "    '[Settings]'",
+        "    'AutoUpdateStart=0'",
+        "    'CheckAutoUpdate=0'",
+        "    'FastAutoUpdate=0'",
+        ")",
+        "    # Set Configs for all executables",
+        "foreach ($f in @('PotPlayerMini64.ini', 'PotPlayerMini.ini', 'PotPlayer64.ini', 'PotPlayer.ini')) {",
+        "    if (-not (Test-Path \"$persist_dir\\$f\")) {",
+        "        Write-Host 'File' $f 'does not exists. Creating' -f Yellow",
+        "        Set-Content \"$dir\\$f\" $CONT -Encoding Ascii",
+        "    }",
+        "}"
+    ],
+    "post_install": [
+        "cmd /c \"$dir\\!)设置优化.bat\""
+    ],
+    "uninstaller": {
+        "script": [
+            "cmd /c \"$dir\\!)卸载清除.bat\""
+        ]
+    },
+    "persist": [
+        "Capture",
+        "Extension",
+        "IconPack",
+        "Logos",
+        "Module",
+        "Playlist",
+        "PxShader",
+        "Skins",
+        "UrlList",
+        "PotPlayer.ini",
+        "PotPlayer64.ini",
+        "PotPlayerMini.ini",
+        "PotPlayerMini64.ini"
+    ]
+}
