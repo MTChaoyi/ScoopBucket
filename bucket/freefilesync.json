@@ -23,6 +23,9 @@
             "RealTimeSync"
         ]
     ],
+    "persist": [
+        "batch"
+    ],
     "checkver": {
         "url": "https://freefilesync.org/download.php",
         "regex": "FreeFileSync\\s+([\\d.]+)\\s+Windows"
