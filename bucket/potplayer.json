@@ -1,6 +1,6 @@
 {
     "version": "231220",
-    "description": "Highly customizable media player",
+    "description": "(个人本地应用备份，安装包仅存于本地)高度可定制的媒体播放器",
     "homepage": "https://potplayer.daum.net",
     "license": {
         "identifier": "Freeware",
@@ -11,7 +11,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://alist.mtchaoyi.top/d/OneDrive/Programs/PotPlayer_1.7.22076_64bit_Green.7z",
+            "url": "http://localhost:5244/d/Local/PotPlayer_1.7.22076_64bit_Green.7z",
             "hash": "20ED8B83099FFB5C93A787C80935E5350681C072C41BB22C4B1BBD6C196E7F25",
             "shortcuts": [
                 [
