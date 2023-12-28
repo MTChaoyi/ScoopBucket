@@ -28,14 +28,16 @@
         "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\alist\"",
         "Copy-Item -Path \"$scriptdir\\alist_start.vbs\" -Destination \"$dir\\alist_start.vbs\"",
         "Copy-Item -Path \"$scriptdir\\alist_stop.vbs\" -Destination \"$dir\\alist_stop.vbs\"",
-        "Copy-Item -Path \"$dir\\alist_start.vbs\" -Destination \"$env:USERPROFILE\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\""
+        "Copy-Item -Path \"$dir\\alist_start.vbs\" -Destination \"$env:USERPROFILE\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\" -Force",
+        "alist start"
     ],
     "persist": [
         "data",
         "log"
     ],
     "pre_uninstall": [
-        "alist stop"
+        "alist stop",
+        "Remove-Item \"$env:USERPROFILE\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\alist_start.vbs\" -Force"
     ],
     "checkver": {
         "github": "https://github.com/alist-org/alist"
