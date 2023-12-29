@@ -1,0 +1,21 @@
+{
+    "homepage": "https://github.com/Z-Siqi/Clash-for-Windows_Chinese",
+    "description": "(个人本地应用备份，安装包仅存于本地)A Windows GUI based on Clash 汉化版",
+    "version": "0.20.39",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "http://localhost:5244/d/Local/Clash.for.Windows-0.20.39-win.7z",
+            "hash": "1B95DC7F12D37B34C525DE07C6D5A0DE7F672E55FD5DD03BD6CBFFF6AE0C9C01"
+        }
+    },
+    "persist": [
+        "data"
+    ],
+    "shortcuts": [
+        [
+            "Clash for Windows.exe",
+            "Clash for Windows"
+        ]
+    ]
+}
