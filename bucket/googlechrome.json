@@ -35,12 +35,13 @@
         "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
         "    info '[Portable Mode]: Copying user data...'",
         "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
-        "    Remove-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Recurse",
         "}",
+        "if (!(Test-Path \"$env:LocalAppData\\Google\\Chrome\")) { mkdir \"$env:LocalAppData\\Google\\Chrome\" | Out-Null }",
+        "if (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\") { Remove-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Recurse }",
         "New-Item -ItemType SymbolicLink -Path \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Target \"$persist_dir\\User Data\""
     ],
     "post_uninstall": [
-        "Remove-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\" -Recurse"
+        "if (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\") { Remove-Item \"$env:LocalAppData\\Google\\Chrome\" -Recurse }"
     ],
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\chrome.exe"
