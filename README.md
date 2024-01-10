@@ -3,6 +3,8 @@
 > Some buckets from [🍨 Scoopet 🍨](https://github.com/ivaquero/scoopet) | [scoop-lemon](https://github.com/hoilc/scoop-lemon) | [rainte](https://github.com/rainte/scoop)
 
 ## :ledger:安装 Scoop
+<details>
+
 ### :bookmark_tabs:1. 设置 PowerShell 执行策略
 
 ```powershell
@@ -20,8 +22,10 @@ irm get.scoop.sh -outfile 'install.ps1'
 ```powershell
 .\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
 ```
+</details>
 
 ## :ledger:推荐安装 App
+<details>
 
 ### :bookmark_tabs:安装 sudo 直接使用管理员运行命令
 
@@ -57,8 +61,10 @@ scoop install aria2
 ```powershell
 scoop install git
 ```
+</details>
 
 ## :ledger:备份恢复
+<details>
 
 ### :bookmark_tabs:导入导出法(全部重新安装，可保留持久化数据)
 
@@ -106,6 +112,7 @@ scoop install git
   ```powershell
   scoop reset *
   ```
+</details>
 
 ## :ledger:常用命令
 
