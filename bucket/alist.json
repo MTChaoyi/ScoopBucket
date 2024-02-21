@@ -25,7 +25,7 @@
         ]
     ],
     "post_install": [
-        "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\alist\"",
+        "$scriptdir = \"$bucketsdir\\$bucket\\scripts\\alist\"",
         "Copy-Item -Path \"$scriptdir\\alist_start.vbs\" -Destination \"$dir\\alist_start.vbs\"",
         "Copy-Item -Path \"$scriptdir\\alist_stop.vbs\" -Destination \"$dir\\alist_stop.vbs\"",
         "Copy-Item -Path \"$dir\\alist_start.vbs\" -Destination \"$env:USERPROFILE\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\" -Force",

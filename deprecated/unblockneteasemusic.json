@@ -12,7 +12,7 @@
         ]
     },
     "post_install": [
-        "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\unblockneteasemusic\"",
+        "$scriptdir = \"$bucketsdir\\$bucket\\scripts\\unblockneteasemusic\"",
         "Copy-Item -Path \"$scriptdir\\nw.js\" -Destination \"$dir\\nw.js\"",
         "if (Get-Command node) {",
         "   if (Get-Command yarn) {",

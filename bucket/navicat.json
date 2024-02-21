@@ -13,7 +13,7 @@
         ]
     ],
     "post_install": [
-        "$scriptdir = \"$bucketsdir\\mtchaoyi\\scripts\\navicat\"",
+        "$scriptdir = \"$bucketsdir\\$bucket\\scripts\\navicat\"",
         "Copy-Item -Path \"$scriptdir\\reset.bat\" -Destination \"$dir\\ResetNavicat.bat\"",
         "Copy-Item -Path \"$scriptdir\\reset.vbs\" -Destination \"$dir\\ResetNavicat.vbs\"",
         "Add-Content -Path \"$dir\\ResetNavicat.vbs\" -Value \"ws.Run \"\"$dir\\ResetNavicat.bat\"\",0\"",

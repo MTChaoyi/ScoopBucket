@@ -1,9 +1,8 @@
-> Learn from [🐟 dorado](https://github.com/chawyehsu/dorado)
+> Modified from [🐟 dorado](https://github.com/chawyehsu/dorado)
 >
 > Some buckets from [🍨 Scoopet 🍨](https://github.com/ivaquero/scoopet) | [scoop-lemon](https://github.com/hoilc/scoop-lemon) | [rainte](https://github.com/rainte/scoop)
 
 ## :ledger:安装 Scoop
-<details>
 
 ### :bookmark_tabs:1. 设置 PowerShell 执行策略
 
@@ -11,18 +10,17 @@
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-### :bookmark_tabs:2. 下载 Scoop 安装脚本
+### :bookmark_tabs:2. （官方版）使用脚本安装 Scoop
 
-```powershell
-irm get.scoop.sh -outfile 'install.ps1'
-```
+- 下载脚本
+  ```powershell
+  irm get.scoop.sh -outfile 'install.ps1'
+  ```
 
-### :bookmark_tabs:3. 使用自定义路径安装 Scoop
-
-```powershell
-.\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
-```
-</details>
+- 使用自定义路径安装 Scoop
+  ```powershell
+  .\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
+  ```
 
 ## :ledger:推荐安装 App
 <details>
@@ -115,6 +113,7 @@ scoop install git
 </details>
 
 ## :ledger:常用命令
+<details>
 
 - 搜索
 
@@ -266,3 +265,5 @@ scoop install git
   scoop depends <app>  # 按安装顺序列出应用程序的依赖项
   scoop alias add|list|rm [<args>]  # 添加、删除或列出 Scoop 别名(别名是自定义的 Scoop 子命令，可用于简化常见任务。)详情见scoop help alias
   ```
+
+</details>
