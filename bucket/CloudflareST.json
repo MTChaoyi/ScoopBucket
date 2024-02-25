@@ -12,6 +12,12 @@
             "hash": "6b40691bda8af67a46cc4d67527b561ee307e37b0da86af150a0d8f8d18a98f2"
         }
     },
+    "shortcuts": [
+        [
+            "CloudflareST.exe",
+            "CloudflareST"
+        ]
+    ],
     "bin": [
         [
             "CloudflareST.exe",
