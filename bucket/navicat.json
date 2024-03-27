@@ -1,10 +1,10 @@
 {
-    "version": "16.3.7",
-    "description": "数据库工具",
+    "version": "16.3.8",
+    "description": "数据库工具，官网下载使用加密，关闭自动更新",
     "homepage": "https://navicat.com.cn",
     "license": "Proprietary",
-    "url": "https://download.navicat.com.cn/download/navicat163_premium_cs_x64.exe",
-    "hash": "393773f435e7a7e0b48166cce55fd38bab2ee93273ba07b24d239cc4ec5790ed",
+    "url": "https://navicat-installers.oss-cn-shanghai.aliyuncs.com/download/navicat163_premium_cs_x64.exe?Expires=1711531071&OSSAccessKeyId=LTAI4GDN6NkeBz3QZXWbEcSU&Signature=vfls6BpM7IdOmsZM%2F1lKx7XgmKs%3D",
+    "hash": "625F12CFE000150D1AC5D5DBD29C5BA7FD0D925505420EC5E5D01010DFAE31E1",
     "innosetup": true,
     "shortcuts": [
         [
@@ -13,7 +13,7 @@
         ]
     ],
     "post_install": [
-        "$scriptdir = \"$bucketsdir\\$bucket\\scripts\\navicat\"",
+        "$scriptdir = \"$bucketsdir\\$bucket\\mtian\\scripts\\navicat\"",
         "Copy-Item -Path \"$scriptdir\\reset.bat\" -Destination \"$dir\\ResetNavicat.bat\"",
         "Copy-Item -Path \"$scriptdir\\reset.vbs\" -Destination \"$dir\\ResetNavicat.vbs\"",
         "Add-Content -Path \"$dir\\ResetNavicat.vbs\" -Value \"ws.Run \"\"$dir\\ResetNavicat.bat\"\",0\"",
@@ -26,12 +26,5 @@
         "已默认将重置试用脚本 ResetNavicat.vbs 添加到开机自启菜单",
         "Win+R 打开运行窗口  输入 shell:startup 查看",
         "如果添加失败或被安全软件拦截  请自行添加应用根目录下的 ResetNavicat.vbs 到开机自启菜单"
-    ],
-    "checkver": {
-        "url": "https://navicat.com.cn/products/navicat-premium-release-note",
-        "re": "Navicat Premium \\(Windows\\) version ([\\d\\.]+)"
-    },
-    "autoupdate": {
-        "url": "https://download.navicat.com.cn/download/navicat$majorVersion$minorVersion_premium_cs_x64.exe"
-    }
+    ]
 }
