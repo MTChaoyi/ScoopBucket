@@ -1,6 +1,6 @@
 {
     "version": "2.13.0",
-    "description": "Unofficial native GUI reimplementation for GOG and Epic Games Launcher",
+    "description": "GOG 和 Epic Games Launcher 的非官方本机 GUI 重新实现",
     "homepage": "https://heroicgameslauncher.com/",
     "license": "GPL-3.0",
     "architecture": {
