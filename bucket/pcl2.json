@@ -1,6 +1,6 @@
 {
     "version": "2.6.15",
-    "description": "Plain Craft Launcher 2（我的世界启动器 PCL2）",
+    "description": "Plain Craft Launcher 2（我的世界启动器 PCL2）（无自动更新）",
     "homepage": "https://github.com/Hex-Dragon/PCL2",
     "license": "Freeware",
     "url": "https://github.com/Hex-Dragon/PCL2/archive/2.6.15.zip",
@@ -20,12 +20,5 @@
             "Plain Craft Launcher 2.exe",
             "PCL2"
         ]
-    ],
-    "checkver": {
-        "url": "https://github.com/Hex-Dragon/PCL2/releases.atom",
-        "regex": "/releases/tag/([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/Hex-Dragon/PCL2/archive/$version.zip"
-    }
+    ]
 }
