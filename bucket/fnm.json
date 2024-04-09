@@ -1,6 +1,6 @@
 {
     "version": "1.35.1",
-    "description": "Node 版本管理器",
+    "description": "Node 版本管理器（默认安装 v20 版本和 yarn 并更换镜像）",
     "homepage": "https://github.com/Schniz/fnm",
     "license":"GPL-3.0-only",
     "url": "https://github.com/Schniz/fnm/releases/download/v1.35.1/fnm-windows.zip",
@@ -17,7 +17,8 @@
         ". $PROFILE",
         "fnm install 20",
         "npm config set registry https://registry.npmmirror.com",
-        "npm install -g yarn"
+        "npm install -g yarn",
+        "yarn config set registry https://registry.npm.taobao.org/"
     ],
     "uninstaller": {
         "script": [

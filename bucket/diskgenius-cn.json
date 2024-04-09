@@ -1,6 +1,6 @@
 {
     "version": "5.5.0.1488",
-    "description": "用于数据恢复、磁盘分区管理、备份和恢复的实用程序（无自动更新）",
+    "description": "用于数据恢复、磁盘分区管理、备份和恢复的实用程序（自存，随时可能失效）",
     "homepage": "https://www.diskgenius.cn/",
     "license": "Freeware",
     "architecture": {

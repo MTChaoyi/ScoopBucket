@@ -1,6 +1,6 @@
 {
     "version": "3.0.20_v2.9",
-    "description": "Emby 电脑桌面客户端 win64x 小秘版（无自动更新）",
+    "description": "Emby 电脑桌面客户端 win64x 小秘版（自存，随时可能失效）",
     "homepage": "https://t.me/EmbyNoisyX",
     "license":"GPL-2.0-only",
     "extract_dir": "Emby Theater",

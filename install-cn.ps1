@@ -5,7 +5,7 @@
 # Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Currentuser
 
 # 调整安装位置和国内 Github 镜像
-$InstallDir = "C:\Test"
+$InstallDir = "D:\Apps"
 $ScoopDir = "$InstallDir\Scoop"
 $ScoopGlobalDir = "$InstallDir\ScoopGlobal"
 $MirrorUrl = "https://mirror.ghproxy.com"

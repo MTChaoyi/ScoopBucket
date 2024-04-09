@@ -5,7 +5,7 @@
 # Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Currentuser
 
 # 调整安装位置
-$InstallDir = "C:\Test"
+$InstallDir = "D:\Apps"
 $ScoopDir = "$InstallDir\Scoop"
 $ScoopGlobalDir = "$InstallDir\ScoopGlobal"
 

@@ -1,6 +1,6 @@
 {
     "version": "6.38.25",
-    "description": "Internet Download Manager(IDM) 是一个用于Windows系统的下载管理器（无自动更新）",
+    "description": "Internet Download Manager(IDM) 是一个用于Windows系统的下载管理器（自存，随时可能失效）",
     "homepage": "https://www.423down.com/575.html",
     "license": "Trailware",
     "depends": "sudo",

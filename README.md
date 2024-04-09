@@ -10,7 +10,8 @@
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-### :bookmark_tabs:2. （官方版）使用脚本安装 Scoop
+### :bookmark_tabs:2. 使用脚本安装 Scoop
+#### :page_facing_up:2.1 官方
 
 - 下载脚本
   ```powershell
@@ -21,6 +22,24 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
   ```powershell
   .\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
   ```
+
+#### :page_facing_up:2.2 自动安装
+
+- 下载脚本
+  ```powershell
+  irm https://raw.githubusercontent.com/MTChaoyi/ScoopBucket/main/install.ps1 -outfile 'install.ps1'
+  ```
+
+- 调整部分配置
+https://github.com/MTChaoyi/ScoopBucket/blob/6d83b8db6ed55fd8d8ade36bc63a044e7118a935/install.ps1#L7-L10
+
+- 直接执行脚本
+
+## :ledger:添加 bucket
+
+```powershell
+scoop bucket add mtchaoyi https://github.com/mtchaoyi/ScoopBucket
+```
 
 ## :ledger:推荐安装 App
 <details>

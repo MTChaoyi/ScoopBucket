@@ -1,6 +1,6 @@
 {
     "version": "1.7.22076",
-    "description": "高度可定制的媒体播放器（无自动更新）",
+    "description": "高度可定制的媒体播放器（自存，随时可能失效）",
     "homepage": "https://potplayer.daum.net",
     "license": {
         "identifier": "Freeware",
