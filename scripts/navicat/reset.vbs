@@ -1,25 +1,26 @@
-Dim objShell
-Set objShell = WScript.CreateObject("WScript.Shell")
+' 清理Navicat升级和注册信息
+Set oShell = WScript.CreateObject("WScript.Shell")
+sDeleteKey = "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium\Update"
+oShell.Run "reg delete """ & sDeleteKey & """ /f", 0, True
+' 删除Navicat注册信息
+sDeleteKey = "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium\Registration"
+oShell.Run "reg delete """ & sDeleteKey & """ /f", 0, True
 
-' Delete registry key and its subkeys/values
-objShell.RegDelete "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium\Update"
-
-' Delete registry keys containing "Registration" under "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium"
-DeleteRegistryKeys "HKEY_CURRENT_USER\Software\PremiumSoft\NavicatPremium", "Registration"
-
-' Delete keys named "Info" and "ShellFolder" under "HKEY_CURRENT_USER\Software\Classes\CLSID"
-DeleteRegistryKeys "HKEY_CURRENT_USER\Software\Classes\CLSID", "Info"
-DeleteRegistryKeys "HKEY_CURRENT_USER\Software\Classes\CLSID", "ShellFolder"
-
-Sub DeleteRegistryKeys(keyPath, targetName)
-    Dim objReg, arrSubkeys, subkey
-    Set objReg = GetObject("winmgmts:\\.\root\default:StdRegProv")
-
-    objReg.EnumKey HKEY_CURRENT_USER, keyPath, arrSubkeys
-
+sDeleteKey = "HKEY_CURRENT_USER\Software\Classes\CLSID"
+sFilter = "Info|ShellFolder"
+set oReg = GetObject("winmgmts:\\.\root\default:StdRegProv")
+oReg.EnumKey HKEY_CURRENT_USER, sDeleteKey, arrSubkeys
+If Not IsNull(arrSubkeys) Then
     For Each subkey In arrSubkeys
-        If InStr(subkey, targetName) > 0 Then
-            objShell.RegDelete keyPath & "\" & subkey
+        oReg.EnumKey sDeleteKey & "\" & subkey, "", arrSubkeys2
+        If Not IsNull(arrSubkeys2) Then
+            For Each subkey2 In arrSubkeys2
+                If InStr(subkey2, sFilter) > 0 Then
+                    ' 删除Navicat文件夹与Windows资源管理器的关联
+                    sDeleteKey2 = sDeleteKey & "\" & subkey & "\" & subkey2
+                    oShell.Run "reg delete """ & sDeleteKey2 & """ /f", 0, True
+                End If
+            Next
         End If
     Next
-End Sub
+End If
