@@ -5,7 +5,7 @@
     "license": "Trailware",
     "depends": "sudo",
     "extract_dir": "IDM",
-    "url": "https://alist.mtian.top/d/lanzou/Inet.Download.Manager.v6.38.25.exe?sign=9sTaT6P9fkBd4vBQ7fWu5JWV2WJMRRwZzZIE40iOocQ=:0#/dl.7z",
+    "url": "https://alist.mtian.net/d/lanzou/Inet.Download.Manager.v6.38.25.exe?sign=9sTaT6P9fkBd4vBQ7fWu5JWV2WJMRRwZzZIE40iOocQ=:0#/dl.7z",
     "hash": "a576324530c044de9d25587189e2b8370ffb9de616f36669776b4883d24a4651",
     "installer": {
         "script": "sudo cmd /c \"$dir\\!)绿化.bat\""
