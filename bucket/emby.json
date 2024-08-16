@@ -2,17 +2,17 @@
     "version": "3.0.20_v2.9",
     "description": "Emby 电脑桌面客户端 win64x 小秘版（自存，随时可能失效）",
     "homepage": "https://t.me/EmbyNoisyX",
-    "license":"GPL-2.0-only",
+    "license": "GPL-2.0-only",
     "extract_dir": "Emby Theater",
-    "url": "https://alist.mtian.top/d/ilanzou/Emby_for_Windows_3.0.20_v2.9(Carnival).7z?sign=ESTZ7aDi0BWZxiN5ead7Dx0bpt7eLrh7mwlFvO76z7I=:0",
-    "hash": "6622DCA444761B1DBE3A81F154A455EEB7CC4ABEB9B5F7E1192849796823B3BA",
+    "url": "https://alist.mtian.top/d/Shares/Emby_for_Windows_3.0.20_v2.9(Carnival).exe#/dl.7z",
+    "hash": "9CE2D03B5FCB7ACC15CAE93D4EFA00474AAB2DD5E49CE84F86E40CB16D56A991",
     "shortcuts": [
         [
             "Emby.Theater.exe",
             "Emby"
         ]
     ],
-    "persist":[
+    "persist": [
         "data"
     ],
     "bin": [

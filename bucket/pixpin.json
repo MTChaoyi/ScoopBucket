@@ -1,0 +1,19 @@
+{
+    "version": "1.0.9.0",
+    "description": "功能强大使用简单的截图/贴图工具，帮助你提高效率（自存，随时可能失效）",
+    "homepage": "https://pixpinapp.com/",
+    "license": "Freeware",
+    "extract_dir": "PixPin_1.8.24.0_Green/PixPin",
+    "url": "https://alist.mtian.net/d/Shares/PixPin_1.8.24.0_Green.7z",
+    "hash": "581FC04ED9BC1E47079FB2996917EE0CD7DA8C7FA43DEA51973A6528BB2EB8B3",
+    "persist": [
+        "Data",
+        "Config"
+    ],
+    "shortcuts": [
+        [
+            "PixPin.exe",
+            "PixPin"
+        ]
+    ]
+}
