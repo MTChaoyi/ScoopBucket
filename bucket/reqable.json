@@ -1,10 +1,10 @@
 {
-    "version": "2.30.2",
+    "version": "2.30.3",
     "description": "新一代API调试 + API测试一站化解决方案",
     "homepage": "https://reqable.com/zh-CN/",
     "license": "Unlicense",
-    "url": "https://pkgs.reqable.com/download/reqable-app-windows-x86_64.zip?platform=windows&arch=x86_64&version=2.30.2&ext=zip",
-    "hash": "527869376cc746c25b2548ce3420cfd54fc33210b15aa7d93dda61b94717b45d",
+    "url": "https://pkgs.reqable.com/download/reqable-app-windows-x86_64.zip?platform=windows&arch=x86_64&version=2.30.3&ext=zip",
+    "hash": "92dff89605f1c018a319a009bf15e36839a12719e79a012c59689c6abb53bf1f",
     "bin": [
         [
             "Reqable.exe",
