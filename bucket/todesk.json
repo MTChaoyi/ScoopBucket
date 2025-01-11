@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.todesk.com/",
     "description": "A unlimited speed multifunctional remote control software",
-    "version": "4.7.5.3",
+    "version": "4.7.6.0",
     "license": "Proprietary",
-    "url": "https://dl.todesk.com/irrigation/ToDesk_4.7.5.3.exe#/dl.7z",
-    "hash": "79acc49a314c45d12b6f5b4cb6e5a5bd0c721b057b89c063b2308e4de37e5392",
+    "url": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.0.exe#/dl.7z",
+    "hash": "a8d242241e308765068e5c5830aa6d28607e8dc2e262d5a95d9d3c990e7f956f",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
